@@ -1,15 +1,21 @@
+import Link from 'next/link';
 import React from 'react';
 
 const PostDetails = ({ post }) => {
     console.log(post);
     return (
-        <div className="card card-compact w-96 bg-base-100 shadow-xl mx-auto my-7">
-            <figure><img src={post.thumbnailUrl} alt="Shoes" /></figure>
-            <div className="card-body">
-                <h2 className="card-title">{post.title}</h2>
-                <p>{post.url}</p>
-                <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+        <div className='text-center'>
+            <Link href="/posts">
+                <button className="btn btn-primary ">Back to Posts</button>
+            </Link>
+            <div className="card card-compact w-96 bg-base-100 shadow-xl mx-auto my-7">
+                <figure><img src={post.thumbnailUrl} alt="Shoes" /></figure>
+                <div className="card-body">
+                    <h2 className="card-title">{post.title}</h2>
+                    <p>{post.url}</p>
+                    <div className="card-actions justify-end">
+                        <button className="btn btn-primary">Buy Now</button>
+                    </div>
                 </div>
             </div>
         </div>
